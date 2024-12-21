@@ -1,0 +1,18 @@
+# .gitignore à la racine du projet
+
+# Frontend (React)
+frontend/node_modules/
+frontend/build/
+frontend/.env
+
+# Backend (Node.js)
+backend/node_modules/
+backend/.env
+backend/logs/
+
+# Fichiers systèmes
+.DS_Store
+Thumbs.db
+
+# VSCode settings
+.vscode/
