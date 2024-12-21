@@ -13,6 +13,7 @@ backend/logs/
 # Fichiers systèmes
 .DS_Store
 Thumbs.db
+*.db
 
 # VSCode settings
 .vscode/
