@@ -6,7 +6,7 @@ frontend/build/
 frontend/.env
 
 # Backend (Node.js)
-backend/node_modules/
+#backend/node_modules/
 backend/.env
 backend/logs/
 
