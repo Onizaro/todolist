@@ -7,6 +7,8 @@ WORKDIR /app
 # Copie les fichiers de l'application dans le conteneur
 COPY package*.json ./
 
+COPY .env ./
+
 # Installe les dépendances
 RUN npm install
 

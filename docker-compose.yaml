@@ -6,9 +6,8 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile
-
     ports:
-      - "3000:3000"
+      - "0.0.0.0:3000:80"
     depends_on:
       - backend
 
@@ -18,7 +17,7 @@ services:
       dockerfile: Dockerfile
 
     ports:
-      - "5000:5000"
+      - "0.0.0.0:5000:5000"
     volumes:
       - sqlite_data:/app/database  # Volume persistant pour la base de données SQLite
     environment:

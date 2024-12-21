@@ -31,6 +31,41 @@
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.week-day {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.week-tasks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.week-day h3 {
+  font-size: 16px;
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.week-day ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.week-day li {
+  font-size: 14px;
+  color: #555;
+  margin: 5px 0;
 }
 
 .task-input {
@@ -141,67 +176,3 @@
   top: 30px;
   right: 30px;
 }
-
-/* Media queries pour les petits écrans (téléphones) */
-@media (max-width: 768px) {
-  .content {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .left-column {
-    width: 100%;
-    background-color: transparent;
-  }
-
-  .right-column {
-    width: 100%;
-  }
-
-  .agenda {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .agenda-column {
-    width: 100%;
-  }
-
-  .task-input {
-    width: 100%;
-  }
-
-  .input-field {
-    width: 100%;
-    font-size: 14px;
-  }
-
-  .add-button {
-    width: 100%;
-    font-size: 16px;
-  }
-
-  .filter-button {
-    width: 100%;
-    font-size: 16px;
-  }
-}
-
-/* Media queries pour les très petits écrans (téléphones plus petits) */
-@media (max-width: 480px) {
-  .task-title {
-    font-size: 16px;
-  }
-
-  .task-deadline,
-  .task-time {
-    font-size: 12px;
-  }
-
-  .input-field,
-  .add-button,
-  .filter-button {
-    font-size: 14px;
-  }
-}
-

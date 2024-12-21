@@ -269,22 +269,31 @@ function App() {
                 <h2>Semaine actuelle</h2>
                 <div className="week-navigation">
                   <button onClick={() => changeWeek(-1)}>Précédente</button>
-                  <span>{currentWeek.toLocaleDateString()}</span>
                   <button onClick={() => changeWeek(1)}>Suivante</button>
                 </div>
-                <div className="week-tasks">
-                  {weekTasks.map((dayTasks, index) => (
-                      <div key={index}>
-                        <h3>Jour {index + 1}</h3>
-                        <ul>
-                          {dayTasks.map((task) => (
-                              <li key={task.id}>
-                                {task.name} - {task.estimatedTime}h
-                              </li>
-                          ))}
-                        </ul>
-                      </div>
-                  ))}
+                <div className="agenda">
+                  {weekDays.map((day, dayIndex) => {
+                    const formattedDate = day.toLocaleDateString('fr-FR', {
+                      weekday: 'long',
+                      year: 'numeric',
+                      month: 'long',
+                      day: '2-digit'
+                    });
+
+                    const dayTasks = weekTasks[dayIndex];
+                    return (
+                        <div key={dayIndex} className="agenda-column">
+                          <h3>{formattedDate}</h3>
+                          {dayTasks.length ? (
+                              dayTasks.map((task, index) => (
+                                  <p key={index}>{task.name}</p>
+                              ))
+                          ) : (
+                              <p>Aucune tâche</p>
+                          )}
+                        </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>
