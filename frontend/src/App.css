@@ -1,4 +1,4 @@
-
+/* Styles généraux */
 .app-container {
   font-family: 'Arial', sans-serif;
   background-color: #f9f9f9;
@@ -135,3 +135,73 @@
   font-size: 18px;
   cursor: pointer;
 }
+
+.logout-button {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+
+/* Media queries pour les petits écrans (téléphones) */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .left-column {
+    width: 100%;
+    background-color: transparent;
+  }
+
+  .right-column {
+    width: 100%;
+  }
+
+  .agenda {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .agenda-column {
+    width: 100%;
+  }
+
+  .task-input {
+    width: 100%;
+  }
+
+  .input-field {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .add-button {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .filter-button {
+    width: 100%;
+    font-size: 16px;
+  }
+}
+
+/* Media queries pour les très petits écrans (téléphones plus petits) */
+@media (max-width: 480px) {
+  .task-title {
+    font-size: 16px;
+  }
+
+  .task-deadline,
+  .task-time {
+    font-size: 12px;
+  }
+
+  .input-field,
+  .add-button,
+  .filter-button {
+    font-size: 14px;
+  }
+}
+

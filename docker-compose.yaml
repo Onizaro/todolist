@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+
+    ports:
+      - "5000:5000"
+    volumes:
+      - sqlite_data:/app/database  # Volume persistant pour la base de données SQLite
+    environment:
+      DATABASE_URL: sqlite:/app/database/db.sqlite  # Chemin de la base de données SQLite dans le conteneur
+
+
+volumes:
+  sqlite_data:
+    driver: local
