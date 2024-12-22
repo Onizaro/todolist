@@ -1,5 +1,5 @@
 # Dockerfile du backend
-FROM node:18
+FROM node:20
 
 # Crée un répertoire pour l'application
 WORKDIR /app

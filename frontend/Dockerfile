@@ -1,5 +1,5 @@
 # Étape de build
-FROM node:18 AS build
+FROM node:20 AS build
 
 WORKDIR /app
 
@@ -22,6 +22,6 @@ COPY --from=build /app/build /usr/share/nginx/html
 # Copier la configuration Nginx personnalisée dans le bon répertoire
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-EXPOSE 80
+EXPOSE 3000
 
 CMD ["nginx", "-g", "daemon off;"]
